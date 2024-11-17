@@ -87,6 +87,7 @@ with final.pkgs.lib; let
     mini-nvim # https://github.com/echasnovski/mini.nvim/
     # Debugging
     nvim-dap
+    nvim-dap-ui
     # Notifications
     nvim-notify
     fidget-nvim
@@ -113,10 +114,6 @@ with final.pkgs.lib; let
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
     # google-java-format # java formatter based off google guidelines
-
-    # misc
-    nodejs # eww
-    gcc
   ];
 in {
   # This is the neovim derivation

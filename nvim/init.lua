@@ -52,7 +52,6 @@ vim.schedule(function()
 end)
 
 -- Configure Neovim diagnostic messages
-
 local function prefix_diagnostic(prefix, diagnostic)
   return string.format(prefix .. ' %s', diagnostic.message)
 end
