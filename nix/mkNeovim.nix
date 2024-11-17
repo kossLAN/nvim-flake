@@ -218,6 +218,7 @@ with lib;
         license = with licenses; [asl20 vim];
         homepage = "https://www.neovim.io";
         platforms = platforms.unix;
+        maintainers = ["na"];
         mainProgram =
           if isCustomAppName
           then appName
