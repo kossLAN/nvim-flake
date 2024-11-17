@@ -206,7 +206,7 @@ with lib;
           mv $out/bin/nvim $out/bin/${lib.escapeShellArg appName}
         '';
       meta = {
-        description = oa.description;
+        description = "Neovim neovim-unwrapped";
         mainProgram =
           if isCustomAppName
           then appName
