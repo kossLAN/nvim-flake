@@ -206,7 +206,17 @@ with lib;
           mv $out/bin/nvim $out/bin/${lib.escapeShellArg appName}
         '';
       meta = {
-        description = "Neovim neovim-unwrapped";
+        description = "Vim text editor fork focused on extensibility and agility";
+        longDescription = ''
+          Neovim is a project that seeks to aggressively refactor Vim in order to:
+          - Simplify maintenance and encourage contributions
+          - Split the work between multiple developers
+          - Enable the implementation of new/modern user interfaces without any
+            modifications to the core source
+          - Improve extensibility with a new plugin architecture
+        '';
+        license = with licenses; [asl20 vim];
+        homepage = "https://www.neovim.io";
         mainProgram =
           if isCustomAppName
           then appName
