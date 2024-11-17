@@ -114,6 +114,9 @@ with final.pkgs.lib; let
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
     # google-java-format # java formatter based off google guidelines
+
+    # misc
+    nodejs # copilot needs this unfortunately dont remove
   ];
 in {
   # This is the neovim derivation
