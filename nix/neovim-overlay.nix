@@ -91,6 +91,8 @@ with final.pkgs.lib; let
     # Notifications
     nvim-notify
     fidget-nvim
+    # Color Highlights
+    nvim-highlight-colors
 
     # Copilot related plugins
     CopilotChat-nvim
