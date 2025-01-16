@@ -88,6 +88,8 @@ with final.pkgs.lib; let
     # Debugging
     nvim-dap
     nvim-dap-ui
+    # Dashboard Plugin
+    dashboard-nvim
     # Notifications
     nvim-notify
     fidget-nvim

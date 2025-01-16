@@ -57,6 +57,15 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = 'debugger [r]epl' }
 )
 
+-- LSP Fix
+vim.keymap.set('n', '<leader>f', vim.lsp.buf.code_action, { noremap = true, silent = true, desc = 'Code Action' })
+
+-- Window Resizing
+vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Up>', '<cmd>resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Down>', '<cmd>resize +2<CR>', { noremap = true, silent = true })
+
 --- Disabled keymaps [enable at your own risk]
 
 -- Automatic management of search highlight
