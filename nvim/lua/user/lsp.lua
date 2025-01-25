@@ -20,4 +20,30 @@ function M.make_client_capabilities()
   return capabilities
 end
 
+---Setup LSP keymaps for the current buffer
+---@param bufnr number Buffer number
+function M.setup_keymaps(bufnr)
+  -- Create a shorthand for mapping keys
+  local opts = { noremap = true, silent = true, buffer = bufnr }
+
+  -- Code actions
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+  -- Quick fix
+  vim.keymap.set('n', '<leader>qf', vim.lsp.buf.code_action, opts)
+  -- Apply first available code action
+  vim.keymap.set('n', '<leader>af', function()
+    vim.lsp.buf.code_action {
+      filter = function(action)
+        return action.isPreferred
+      end,
+      apply = true,
+    }
+  end, opts)
+end
+
+-- Attach keymaps when LSP client attaches to a buffer
+function M.on_attach(client, bufnr)
+  M.setup_keymaps(bufnr)
+end
+
 return M
