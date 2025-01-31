@@ -117,6 +117,7 @@ with final.pkgs.lib; let
     stylua # lua formatter
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
+    qt6.qtdeclarative
     # google-java-format # java formatter based off google guidelines
 
     # misc
