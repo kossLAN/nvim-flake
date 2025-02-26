@@ -111,13 +111,13 @@ with final.pkgs.lib; let
     rust-analyzer # rust LSP
     vscode-langservers-extracted # various web dev lsps from vscode
     typescript-language-server # css lsp thing
+    qt6.qtdeclarative # qmlls
 
     # autoformatters
     alejandra # amazing nix autoformatter
     stylua # lua formatter
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
-    qt6.qtdeclarative
     # google-java-format # java formatter based off google guidelines
 
     # misc
