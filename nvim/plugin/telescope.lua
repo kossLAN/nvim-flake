@@ -29,6 +29,12 @@ vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch curren
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set(
+  'n',
+  '<leader>fb',
+  ':Telescope file_browser<CR>',
+  { desc = '[F]ile [B]rowser', noremap = true, silent = true }
+)
 
 telescope.setup {
   defaults = {
@@ -90,8 +96,23 @@ telescope.setup {
       override_generic_sorter = false,
       override_file_sorter = true,
     },
+    file_browser = {
+      hijack_netrw = true,
+      hidden = true,
+      respect_gitignore = false,
+      mappings = {
+        ['n'] = {
+          ['a'] = require('telescope._extensions.file_browser.actions').create,
+          ['r'] = require('telescope._extensions.file_browser.actions').rename,
+          ['d'] = require('telescope._extensions.file_browser.actions').remove,
+          ['h'] = require('telescope._extensions.file_browser.actions').goto_parent_dir,
+          ['N'] = require('telescope._extensions.file_browser.actions').create,
+        },
+      },
+    },
   },
 }
 
 telescope.load_extension('fzy_native')
+telescope.load_extension('file_browser')
 -- telescope.load_extension('smart_history')

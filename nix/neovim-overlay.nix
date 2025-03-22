@@ -51,6 +51,7 @@ with final.pkgs.lib; let
     # telescope and extensions
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
     telescope-fzy-native-nvim # https://github.com/nvim-telescope/telescope-fzy-native.nvim
+    telescope-file-browser-nvim
     # telescope-smart-history-nvim # https://github.com/nvim-telescope/telescope-smart-history.nvim
     # ^ telescope and extensions
     # UI
@@ -82,7 +83,7 @@ with final.pkgs.lib; let
     # Autoformatting
     conform-nvim
     # Theme for neovim
-    everforest
+    catppuccin-nvim
     # QOL Plugin for visuals mostly
     mini-nvim # https://github.com/echasnovski/mini.nvim/
     # Debugging
