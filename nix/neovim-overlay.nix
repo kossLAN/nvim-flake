@@ -4,10 +4,9 @@ with final.pkgs.lib; let
   pkgs = final;
 
   # Use this to create a plugin from a flake input
-  mkNvimPlugin = src: pname:
+  mkNvimPlugin = pname: version: src:
     pkgs.vimUtils.buildVimPlugin {
-      inherit pname src;
-      version = src.lastModifiedDate;
+      inherit pname version src;
     };
 
   # Make sure we use the pinned nixpkgs instance for wrapNeovimUnstable,
@@ -82,8 +81,6 @@ with final.pkgs.lib; let
     which-key-nvim
     # Autoformatting
     conform-nvim
-    # Theme for neovim
-    catppuccin-nvim
     # QOL Plugin for visuals mostly
     mini-nvim # https://github.com/echasnovski/mini.nvim/
     # Debugging
@@ -96,6 +93,7 @@ with final.pkgs.lib; let
     fidget-nvim
     # Color Highlights
     nvim-highlight-colors
+    base16-nvim
   ];
 
   extraPackages = with pkgs; [

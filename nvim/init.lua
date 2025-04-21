@@ -108,8 +108,8 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
 
 -- Vim Theme
-require('catppuccin').setup {
-  flavour = 'macchiato',
-}
+-- require('catppuccin').setup {
+--   flavour = 'macchiato',
+-- }
 
-vim.cmd.colorscheme('catppuccin')
+-- vim.cmd.colorscheme('lushwal')
