@@ -106,6 +106,7 @@ with final.pkgs.lib; let
     vscode-langservers-extracted # various web dev lsps from vscode
     typescript-language-server # css lsp thing
     qt6.qtdeclarative # qmlls
+    omnisharp-roslyn # c# lsp
 
     # autoformatters
     alejandra # amazing nix autoformatter

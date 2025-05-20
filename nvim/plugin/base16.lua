@@ -1,6 +1,6 @@
 local colors_file = io.open(os.getenv('HOME') .. '/.cache/mutagen/colors.json', 'r')
 if not colors_file then
-  vim.notify('Mutagen colors file not found', vim.log.levels.ERROR)
+  -- vim.notify('Mutagen colors file not found', vim.log.levels.ERROR)
   return
 end
 
@@ -9,13 +9,13 @@ colors_file:close()
 
 local ok, colors_data = pcall(vim.fn.json_decode, content)
 if not ok then
-  vim.notify('Failed to parse Mutagen colors JSON: ' .. tostring(colors_data), vim.log.levels.ERROR)
+  -- vim.notify('Failed to parse Mutagen colors JSON: ' .. tostring(colors_data), vim.log.levels.ERROR)
   return
 end
 
 local colors = colors_data.colors
 if not colors then
-  vim.notify('No colors found in Mutagen JSON', vim.log.levels.ERROR)
+  -- vim.notify('No colors found in Mutagen JSON', vim.log.levels.ERROR)
   return
 end
 
