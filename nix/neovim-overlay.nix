@@ -81,8 +81,9 @@ with final.pkgs.lib; let
     which-key-nvim
     # Autoformatting
     conform-nvim
-    # QOL Plugin for visuals mostly
+    # QOL Plugins for visuals mostly
     mini-nvim # https://github.com/echasnovski/mini.nvim/
+    diagflow-nvim
     # Debugging
     nvim-dap
     nvim-dap-ui
