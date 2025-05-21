@@ -1,6 +1,25 @@
 local colors_file = io.open(os.getenv('HOME') .. '/.cache/mutagen/colors.json', 'r')
 if not colors_file then
-  -- vim.notify('Mutagen colors file not found', vim.log.levels.ERROR)
+  local base16_colors = {
+    base00 = '#131313',
+    base01 = '#1f1f1f',
+    base02 = '#2a2a2a',
+    base03 = '#919191',
+    base04 = '#c6c6c6',
+    base05 = '#e2e2e2',
+    base06 = '#e2e2e2',
+    base07 = '#303030',
+    base08 = '#ffb4ab',
+    base09 = '#dec38c',
+    base0A = '#e7bdb6',
+    base0B = '#ffb4a8',
+    base0C = '#705c2e',
+    base0D = '#9c4236',
+    base0E = '#775651',
+    base0F = '#ba1a1a',
+  }
+
+  require('base16-colorscheme').setup(base16_colors)
   return
 end
 
