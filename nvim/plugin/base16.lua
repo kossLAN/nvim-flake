@@ -1,4 +1,4 @@
-local colors_file = io.open(os.getenv('HOME') .. '/.cache/mutagen/colors.json', 'r')
+local colors_file = io.open(os.getenv('HOME') .. '/.local/share/nvim-colors.json', 'r')
 if not colors_file then
   local base16_colors = {
     base00 = '#131313',
