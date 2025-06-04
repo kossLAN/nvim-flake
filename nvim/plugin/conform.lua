@@ -21,5 +21,5 @@ require('conform').setup {
 }
 
 vim.keymap.set('n', '<space>f', function()
-  require('conform').format { async = true }
+  require('conform').format { async = true, lsp_format = 'fallback' }
 end, { desc = '[f]ormat buffer' })
