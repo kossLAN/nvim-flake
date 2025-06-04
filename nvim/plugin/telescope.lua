@@ -27,14 +27,9 @@ vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles
 vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+vim.keymap.set('n', '<leader>se', builtin.diagnostics, { desc = '[S]earch [E]rrors' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-vim.keymap.set(
-  'n',
-  '<leader>fb',
-  ':Telescope file_browser<CR>',
-  { desc = '[F]ile [B]rowser', noremap = true, silent = true }
-)
+vim.keymap.set('n', '<leader>sd', ':Telescope file_browser<CR>', { desc = 'Search [D]irectory' })
 
 telescope.setup {
   defaults = {
@@ -57,7 +52,7 @@ telescope.setup {
           local multi = picker:get_multi_selection()
           actions.select_default(pb) -- the normal enter behaviour
           for _, j in pairs(multi) do
-            if j.path ~= nil then -- is it a file -> open it as well:
+            if j.path ~= nil then    -- is it a file -> open it as well:
               vim.cmd(string.format('%s %s', 'edit', j.path))
             end
           end

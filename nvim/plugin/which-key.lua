@@ -11,6 +11,7 @@ wk.add {
   { '<leader>s', group = '[S]earch' },
   { '<leader>w', group = '[W]orkspace' },
   { '<leader>t', group = '[T]oggle' },
+  { '<leader>f', group = '[F]ormat' },
   { '<leader>g', group = '[G]it' },
   { '<leader>p', group = '[P]eek' },
   { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },

@@ -103,7 +103,7 @@ with final.pkgs.lib; let
     lua-language-server
     clang-tools # provides clangd which is a c/c++ lsp
     jdt-language-server # java ls
-    nixd # nix LSP
+    nil # nix lsp
     rust-analyzer # rust LSP
     vscode-langservers-extracted # various web dev lsps from vscode
     typescript-language-server # css lsp thing
@@ -116,6 +116,10 @@ with final.pkgs.lib; let
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
     # google-java-format # java formatter based off google guidelines
+
+    # extra required packages
+    gcc
+    nodejs
   ];
 in {
   # This is the neovim derivation
