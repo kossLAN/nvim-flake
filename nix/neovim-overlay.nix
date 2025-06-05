@@ -109,6 +109,7 @@ with final.pkgs.lib; let
     typescript-language-server # css lsp thing
     qt6.qtdeclarative # qmlls
     omnisharp-roslyn # c# lsp
+    dart # dart lsp
 
     # autoformatters
     alejandra # amazing nix autoformatter
