@@ -111,6 +111,7 @@ with final.pkgs.lib; let
     qt6.qtdeclarative # qmlls
     omnisharp-roslyn # c# lsp
     dart # dart lsp
+    svelte-language-server # svelte lsp
 
     # autoformatters
     alejandra # amazing nix autoformatter
