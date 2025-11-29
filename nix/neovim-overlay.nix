@@ -84,6 +84,7 @@ with final.pkgs.lib; let
     # QOL Plugins for visuals mostly
     mini-nvim # https://github.com/echasnovski/mini.nvim/
     diagflow-nvim
+    toggleterm-nvim
     # Debugging
     nvim-dap
     nvim-dap-ui
