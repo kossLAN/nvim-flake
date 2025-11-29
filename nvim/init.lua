@@ -16,6 +16,10 @@ if fn.has('termguicolors') then
   opt.termguicolors = true
 end
 
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- See :h <option> to see what the options do
 
 -- Search down into subfolders
@@ -106,10 +110,3 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
-
--- Vim Theme
--- require('catppuccin').setup {
---   flavour = 'macchiato',
--- }
-
--- vim.cmd.colorscheme('lushwal')

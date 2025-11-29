@@ -50,7 +50,6 @@ with final.pkgs.lib; let
     # telescope and extensions
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
     telescope-fzy-native-nvim # https://github.com/nvim-telescope/telescope-fzy-native.nvim
-    telescope-file-browser-nvim
     # telescope-smart-history-nvim # https://github.com/nvim-telescope/telescope-smart-history.nvim
     # ^ telescope and extensions
     # UI
@@ -88,14 +87,14 @@ with final.pkgs.lib; let
     # Debugging
     nvim-dap
     nvim-dap-ui
-    # Dashboard Plugin
-    dashboard-nvim
+    # File tree
+    nvim-tree-lua
     # Notifications
     nvim-notify
     fidget-nvim
-    # Color Highlights
+    # Color utilities
     nvim-highlight-colors
-    base16-nvim
+    catppuccin-nvim
   ];
 
   extraPackages = with pkgs; [

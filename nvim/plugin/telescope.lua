@@ -29,7 +29,6 @@ vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch curren
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>se', builtin.diagnostics, { desc = '[S]earch [E]rrors' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-vim.keymap.set('n', '<leader>sd', ':Telescope file_browser<CR>', { desc = 'Search [D]irectory' })
 
 telescope.setup {
   defaults = {
@@ -52,7 +51,7 @@ telescope.setup {
           local multi = picker:get_multi_selection()
           actions.select_default(pb) -- the normal enter behaviour
           for _, j in pairs(multi) do
-            if j.path ~= nil then    -- is it a file -> open it as well:
+            if j.path ~= nil then -- is it a file -> open it as well:
               vim.cmd(string.format('%s %s', 'edit', j.path))
             end
           end
@@ -91,23 +90,8 @@ telescope.setup {
       override_generic_sorter = false,
       override_file_sorter = true,
     },
-    file_browser = {
-      hijack_netrw = true,
-      hidden = true,
-      respect_gitignore = false,
-      mappings = {
-        ['n'] = {
-          ['a'] = require('telescope._extensions.file_browser.actions').create,
-          ['r'] = require('telescope._extensions.file_browser.actions').rename,
-          ['d'] = require('telescope._extensions.file_browser.actions').remove,
-          ['h'] = require('telescope._extensions.file_browser.actions').goto_parent_dir,
-          ['N'] = require('telescope._extensions.file_browser.actions').create,
-        },
-      },
-    },
   },
 }
 
 telescope.load_extension('fzy_native')
-telescope.load_extension('file_browser')
 -- telescope.load_extension('smart_history')

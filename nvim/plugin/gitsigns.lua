@@ -58,7 +58,6 @@ vim.schedule(function()
       map('n', '<leader>hD', function()
         gs.diffthis('~')
       end, { desc = 'git [h] [D]iff ~' })
-      map('n', '<leader>td', gs.toggle_deleted, { desc = 'git [t]oggle [d]eleted' })
       -- Text object
       map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'git stage buffer' })
     end,
