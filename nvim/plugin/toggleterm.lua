@@ -1,5 +1,5 @@
 require('toggleterm').setup {
-  open_mapping = [[<c-t>]],
+  open_mapping = nil,
   direction = 'float',
   persist_mode = false,
   auto_scroll = false,
@@ -9,7 +9,7 @@ require('toggleterm').setup {
 for i = 0, 9 do
   vim.api.nvim_set_keymap(
     'n',
-    '<leader>tt' .. i,
+    '<c-' .. i .. '>',
     '<CMD>ToggleTerm ' .. i .. '<CR>',
     { noremap = true, silent = true }
   )
