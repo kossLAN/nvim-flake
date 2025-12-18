@@ -8,7 +8,6 @@ local M = {}
 
 ---Gets a 'ClientCapabilities' object, describing the LSP client capabilities
 ---Extends the object with capabilities provided by plugins.
----@return lsp.ClientCapabilities
 function M.make_client_capabilities()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   -- Add com_nvim_lsp capabilities
@@ -42,7 +41,7 @@ function M.setup_keymaps(bufnr)
 end
 
 -- Attach keymaps when LSP client attaches to a buffer
-function M.on_attach(client, bufnr)
+function M.on_attach(_, bufnr)
   M.setup_keymaps(bufnr)
 end
 

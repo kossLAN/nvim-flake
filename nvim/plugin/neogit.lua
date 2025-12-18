@@ -10,8 +10,8 @@ neogit.setup {
   disable_insert_on_commit = 'auto',
   integrations = {
     diffview = true,
-    telescope = true,
-    fzf_lua = true,
+    telescope = false,
+    fzf_lua = false,
   },
   sections = {
     ---@diagnostic disable-next-line: missing-fields
@@ -20,6 +20,7 @@ neogit.setup {
     },
   },
 }
+
 vim.keymap.set('n', '<leader>go', neogit.open, { noremap = true, silent = true, desc = 'neo[g]it [o]pen' })
 vim.keymap.set('n', '<leader>gs', function()
   neogit.open { kind = 'auto' }

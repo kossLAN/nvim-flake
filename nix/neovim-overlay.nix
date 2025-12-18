@@ -47,13 +47,7 @@ with final.pkgs.lib; let
     gitsigns-nvim # https://github.com/lewis6991/gitsigns.nvim/
     vim-fugitive # https://github.com/tpope/vim-fugitive/
     # ^ git integration plugins
-    # telescope and extensions
-    telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
-    telescope-fzy-native-nvim # https://github.com/nvim-telescope/telescope-fzy-native.nvim
-    # telescope-smart-history-nvim # https://github.com/nvim-telescope/telescope-smart-history.nvim
-    # ^ telescope and extensions
-    # UI
-    statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
+    lualine-nvim # Statusline | https://github.com/nvim-lualine/lualine.nvim/
     nvim-treesitter-context # nvim-treesitter-context
     # ^ UI
     # language support
@@ -81,21 +75,18 @@ with final.pkgs.lib; let
     which-key-nvim
     # Autoformatting
     conform-nvim
-    # QOL Plugins for visuals mostly
-    mini-nvim # https://github.com/echasnovski/mini.nvim/
+    # QOL Plugins
     diagflow-nvim
+    snacks-nvim
     toggleterm-nvim
     # Debugging
     nvim-dap
     nvim-dap-ui
-    # File tree
-    nvim-tree-lua
     # Notifications
-    nvim-notify
     fidget-nvim
     # Color utilities
     nvim-highlight-colors
-    catppuccin-nvim
+    onedark-nvim
   ];
 
   extraPackages = with pkgs; [
@@ -112,17 +103,18 @@ with final.pkgs.lib; let
     omnisharp-roslyn # c# lsp
     dart # dart lsp
     svelte-language-server # svelte lsp
+    nushell # the shell and the lsp :p
 
     # autoformatters
     alejandra # amazing nix autoformatter
     stylua # lua formatter
     rustfmt # rust formatter
     prettierd # typescript/javascript formatter
-    # google-java-format # java formatter based off google guidelines
 
     # extra required packages
-    gcc
-    nodejs
+    gcc # for clangd
+    nodejs # ):
+    fd # file finder
   ];
 in {
   # This is the neovim derivation

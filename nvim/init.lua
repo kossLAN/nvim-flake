@@ -7,8 +7,6 @@ local g = vim.g
 g.mapleader = ' '
 g.maplocalleader = ' '
 
-vim.cmd('let g:telescope_debug = 1')
-
 opt.compatible = false
 
 -- Enable true colour support

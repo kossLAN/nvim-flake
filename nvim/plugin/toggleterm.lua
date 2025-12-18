@@ -1,25 +1,23 @@
+if vim.g.did_load_toggleterm_plugin then
+  return
+end
+vim.g.did_load_toggleterm_plugin = true
+
 require('toggleterm').setup {
   open_mapping = nil,
   direction = 'float',
   persist_mode = false,
   auto_scroll = false,
+  float_opts = {
+    border = 'rounded',
+  },
 }
 
--- Allow for 10 terminal spawns mapped to NumKeys.
 for i = 0, 9 do
-  vim.api.nvim_set_keymap('n', '<C-' .. i .. '>', '<CMD>ToggleTerm ' .. i .. '<CR>', { noremap = true, silent = true })
-
-  vim.api.nvim_set_keymap(
-    'i',
+  vim.keymap.set(
+    { 'n', 't' }, -- Both terminal and normal
     '<C-' .. i .. '>',
-    '<Esc><CMD>ToggleTerm ' .. i .. '<CR>',
-    { noremap = true, silent = true }
-  )
-
-  vim.api.nvim_set_keymap(
-    't',
-    '<C-' .. i .. '>',
-    '<C-\\><C-n><CMD>ToggleTerm ' .. i .. '<CR>',
+    '<CMD>ToggleTerm ' .. i .. '<CR>',
     { noremap = true, silent = true }
   )
 end

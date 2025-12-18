@@ -9,7 +9,7 @@ local keymap = vim.keymap
 keymap.set('n', 'Y', 'y$', { silent = true, desc = '[Y]ank to end of line' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Buffer list navigation
 keymap.set('n', '[b', vim.cmd.bprevious, { silent = true, desc = 'previous [b]uffer' })
@@ -21,47 +21,11 @@ keymap.set('n', ']B', vim.cmd.blast, { silent = true, desc = 'last [B]uffer' })
 keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'switch to normal mode' })
 keymap.set('t', '<C-Esc>', '<Esc>', { desc = 'send Esc to terminal' })
 
--- DAP Keymaps
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>db',
-  ':lua require"dap".toggle_breakpoint()<CR>',
-  { noremap = true, silent = true, desc = 'debugger set [b]reakpoint' }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>dc',
-  ':lua require"dap".continue()<CR>',
-  { noremap = true, silent = true, desc = 'debugger [c]ontinue' }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>dn',
-  ':lua require"dap".step_over()<CR>',
-  { noremap = true, silent = true, desc = 'debugger [s]tep over' }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>di',
-  ':lua require"dap".step_into()<CR>',
-  { noremap = true, silent = true, desc = 'debugger [s]tep into' }
-)
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>dr',
-  ':lua require"dap".repl.open()<CR>',
-  { noremap = true, silent = true, desc = 'debugger [r]epl' }
-)
-
 -- Window Resizing
-vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-Up>', '<cmd>resize -2<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-Down>', '<cmd>resize +2<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-Up>', '<cmd>resize -2<CR>', { noremap = true, silent = true })
+keymap.set('n', '<C-Down>', '<cmd>resize +2<CR>', { noremap = true, silent = true })
 
 --- Disabled keymaps [enable at your own risk]
 
