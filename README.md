@@ -1,6 +1,6 @@
 # nvim-flake 
 
-1. This is my personal configuration started from [Kickstart-nix.nvim](https://github.com/nix-community/kickstart-nix.nvim), I really liked the design and decided to base my configuration on it, if you are seeing this don't copy from me instead start from scratch, because I deviate a good amount with my own biases.
+This is my personal configuration started from [Kickstart-nix.nvim](https://github.com/nix-community/kickstart-nix.nvim), I really liked the design and decided to base my configuration on it, if you are seeing this don't copy from me instead start from scratch, because I deviate a good amount with my own biases.
 
 ## Installation
 
