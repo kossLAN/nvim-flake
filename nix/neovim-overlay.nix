@@ -104,7 +104,6 @@ with final.pkgs.lib; let
     dart # dart lsp
     svelte-language-server # svelte lsp
     nushell # the shell and the lsp :p
-    cmake-language-server # cmake sob
 
     # autoformatters
     alejandra # amazing nix autoformatter
