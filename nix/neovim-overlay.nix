@@ -49,6 +49,7 @@ with final.pkgs.lib; let
     # ^ git integration plugins
     lualine-nvim # Statusline | https://github.com/nvim-lualine/lualine.nvim/
     nvim-treesitter-context # nvim-treesitter-context
+    dropbar-nvim
     # ^ UI
     # language support
     # ^ language support
