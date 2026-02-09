@@ -97,7 +97,6 @@ with final.pkgs.lib; let
     jdt-language-server # java ls
     nil # nix lsp
     rust-analyzer # rust LSP
-    zls # zig LSP
     vscode-langservers-extracted # various web dev lsps from vscode
     typescript-language-server # css lsp thing
     qt6.qtdeclarative # qmlls
